@@ -8,9 +8,8 @@ with open(FILE_NAME) as file:
     datastream = file.readline()
 
 '''
-PART 2
+PART 1
 '''
-
 for i in enumerate(datastream):
     marker = True
     if i[0] > 3:
@@ -32,8 +31,8 @@ PART 2
 
 for i in enumerate(datastream):
     marker = True
-    if i[0] > 3:
-        buffer = datastream[i[0]-4:i[0]]
+    if i[0] > 13:
+        buffer = datastream[i[0]-14:i[0]]
         for item in buffer:
             if buffer.count(item) > 1:
                 marker = False
