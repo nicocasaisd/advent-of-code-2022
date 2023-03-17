@@ -2,7 +2,7 @@
 --- Day 6: Tuning Trouble ---
 '''
 
-FILE_NAME = 'input'
+FILE_NAME = 'input-min'
 
 with open(FILE_NAME) as file:
     datastream = file.readline()
@@ -42,3 +42,14 @@ for i in enumerate(datastream):
             print(i)
             break
         
+
+'''
+Solution from https://galaxyinferno.com/how-to-solve-advent-of-code-2022-day-6-with-python/
+'''
+
+# It is shorter and uses a set to check if duplicate values exist
+
+for i in range(len(datastream)):
+    if len(set(datastream[i:i+4]))==4:
+        print(i+4)
+        break
